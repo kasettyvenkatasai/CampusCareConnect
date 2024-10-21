@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/styles/index.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anta&family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <video autoplay muted id="myVideo">
+        <source src="presentation.mp4" type="video/mp4"> 
+        Your browser does not support HTML5 video.
+      </video>
+    <div class="maincontent">
+        <div class="first_block" id="first">
+            <h1>Schedule an Appointment</h1>
+            <p>Booking an appointment with your doctor is now more convenient with customizable time slots</p>
+          </div>
+          <div class="second_block" id="second">
+            <h1>Track your Appointment</h1>
+            <p>Track an appointment and manage those appointments within your respective college</p>
+          </div>
+          <div class="third_block" id="third">
+            <h1> Student Health Record</h1>
+            <p>    A student can confidently 
+  access their medical history & comprehensive
+overview of their health journey</p>
+          </div>
+    </div>
+    <div class="navbar">
+      <div class="firstpart">
+        <img src="images/IIIT_Sri_City_Logo.png" alt="" id="image">
+        <div class="textpart">
+          <p style="display:inline-block;" id="tag" >Campus Care Connect</p>
+        </div>
+        
+      </div>
+      <div class="thirdpart">
+        
+          <p  id="clickme">About Us</p>
+          <p id="adminlogin">Admin Login</p>
+        
+      </div>
+    <div class="secondpart">
+      <button style="margin-left:25%;" id="login">lOG IN</button>
+      <button style="margin-left:10%;" id="login1">SuperUser</button>
+      
+    </div>
+    
+    </div>
+    <div class="text">
+        <h1 id="M">M</h1>
+        <h1 id="E">E</h1>
+        <h1 id="D">D</h1>
+        <h1 id="I">I</h1>
+        <h1 id="C">C</h1>
+        <h1 id="O">O</h1>
+        <h1 id="R">R</h1>
+        <h1 id="U">U</h1>
+        <h1 id="M1">M</h1>
+        
+    </div>
+    
+
+
+
+
+
+<script>
+  document.getElementById("login").addEventListener("click", function() {
+    window.location.href = "/a"; 
+  }) 
+  document.getElementById("login1").addEventListener("click", function() {
+    window.location.href = "/suser/login"; 
+  }) 
+  
+  document.getElementById("clickme").addEventListener("click", function() {
+    window.location.href = "/aboutus"; 
+  }) 
+  document.getElementById("adminlogin").addEventListener("click", function() {
+    window.location.href = "/adminlogin"; 
+  }) 
+
+
+
+</script>
+
+</body>
+</html>

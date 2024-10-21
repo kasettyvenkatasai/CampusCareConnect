@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign UP</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/signup.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <form method="post" action="/requestotp123" onsubmit="return validateForm()">
+            <p>REGISTER</p>
+            <input type="email" name="email" placeholder="Email" id="" style="margin-bottom: 2rem;" required><br>
+            
+            <div>
+              <select name="college1" id="colleges" required>
+                  <% if (providedCollege) { %> 
+                      <option value="<%= providedCollege.name %>" selected><%= providedCollege.name %></option>
+                  <% } else { %> 
+                      <% for (let index = 0; index < clgs.length; index++) { %>
+                          <option value="<%= clgs[index].name %>"><%= clgs[index].name %></option>
+                      <% } %>
+                  <% } %>
+              </select>
+          </div>
+            
+            <div class="password">
+              <input type="password" name="password1" placeholder="Password" id="password1" required><br>
+              <img src="/images/lock.png" alt="" class="lockimage" id="lockimage">
+              <small id="passwordHelp" class="error"></small>
+            </div>
+            
+            <div class="password">
+              <input type="password" name="password2" placeholder="Confirm password" id="password2" required><br>
+              <img src="/images/lock.png" alt="" class="lockimage" id="lockimage1">
+              <small id="confirmHelp" class="error"></small>
+            </div>
+            
+            <input type="submit" value="SIGN UP"><br>
+            
+            <div class="new1">
+              <a href="#" id="su"></a>
+              <a href="#" id="fp"></a>
+            </div>
+          </form>
+          
+    </div>
+    
+<script>
+    // Toggle password visibility
+    var passwordInput = document.getElementById("password1");
+    var togglePassword = document.getElementById("lockimage");
+    togglePassword.addEventListener("click", function() {
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            togglePassword.src = "/images/eyeopen.png"; 
+        } else {
+            passwordInput.type = "password";
+            togglePassword.src = "/images/lock.png";
+        }
+    });
+    
+    var passwordInput1 = document.getElementById("password2");
+    var togglePassword1 = document.getElementById("lockimage1");
+    togglePassword1.addEventListener("click", function() {
+        if (passwordInput1.type === "password") {
+            passwordInput1.type = "text";
+            togglePassword1.src = "/images/eyeopen.png"; 
+        } else {
+            passwordInput1.type = "password";
+            togglePassword1.src = "/images/lock.png";
+        }
+    });
+
+    // Form validation
+    function validateForm() {
+        var password1 = document.getElementById("password1").value;
+        var password2 = document.getElementById("password2").value;
+        var passwordHelp = document.getElementById("passwordHelp");
+        var confirmHelp = document.getElementById("confirmHelp");
+
+        // Reset error messages
+        passwordHelp.innerHTML = "";
+        confirmHelp.innerHTML = "";
+
+        // Check password length (min 8 characters)
+        if (password1.length < 8) {
+            passwordHelp.innerHTML = "Password must be at least 8 characters long.";
+            return false;
+        }
+
+        // Check for at least one uppercase letter
+        if (!/[A-Z]/.test(password1)) {
+            passwordHelp.innerHTML = "Password must contain at least one uppercase letter.";
+            return false;
+        }
+
+        // Check for at least one number
+        if (!/[0-9]/.test(password1)) {
+            passwordHelp.innerHTML = "Password must contain at least one number.";
+            return false;
+        }
+
+        // Check for at least one special character
+        if (!/[!@#$%^&*(),.?":{}|<>]/.test(password1)) {
+            passwordHelp.innerHTML = "Password must contain at least one special character.";
+            return false;
+        }
+
+        // Check if passwords match
+        if (password1 !== password2) {
+            confirmHelp.innerHTML = "Passwords do not match.";
+            return false;
+        }
+
+        return true; // Form can be submitted
+    }
+</script>
+
+</body>
+
+</html>

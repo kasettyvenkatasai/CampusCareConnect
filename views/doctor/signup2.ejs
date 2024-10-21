@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign UP</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/signup.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <form id="signupForm" method="post" action="/admindoctorview">
+            <p>REGISTER</p>
+
+            <!-- Email input -->
+            <input type="email" name="email" placeholder="Username" id="email" style="margin-bottom: 2rem;"><br>
+            <span id="emailError" class="error-message"></span>
+
+            <!-- Password input with toggle -->
+            <div class="password">
+                <input type="password" name="password1" placeholder="Password" id="password1"><br>
+                <img src="/images/lock.png" alt="" class="lockimage" id="lockimage">
+                <span id="passwordError" class="error-message"></span>
+            </div>
+
+            <!-- Confirm password input with toggle -->
+            <div class="password">
+                <input type="password" name="password2" placeholder="Confirm password" id="password2"><br>
+                <img src="/images/lock.png" alt="" class="lockimage" id="lockimage1">
+                <span id="confirmPasswordError" class="error-message"></span>
+            </div>
+            
+            <!-- Submit button -->
+            <input type="submit" value="SIGN UP"><br>
+
+            <div class="new1">
+                <a href="#" id="su" ></a>
+                <a href="#" id="fp"></a>
+            </div>
+        </form>
+    </div>
+
+<script>
+    // Password visibility toggle
+    var passwordInput = document.getElementById("password1");
+    var togglePassword = document.getElementById("lockimage");
+    togglePassword.addEventListener("click", function() {
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            togglePassword.src = "/images/eyeopen.png"; 
+        } else {
+            passwordInput.type = "password";
+            togglePassword.src = "/images/lock.png";
+        }
+    });
+
+    var passwordInput1 = document.getElementById("password2");
+    var togglePassword1 = document.getElementById("lockimage1");
+    togglePassword1.addEventListener("click", function() {
+        if (passwordInput1.type === "password") {
+            passwordInput1.type = "text";
+            togglePassword1.src = "/images/eyeopen.png"; 
+        } else {
+            passwordInput1.type = "password";
+            togglePassword1.src = "/images/lock.png";
+        }
+    });
+
+    // Form validation
+    document.getElementById("signupForm").addEventListener("submit", function(event) {
+        // Clear previous error messages
+        document.getElementById("emailError").textContent = '';
+        document.getElementById("passwordError").textContent = '';
+        document.getElementById("confirmPasswordError").textContent = '';
+
+        let isValid = true;
+
+        // Email validation
+        var email = document.getElementById("email").value;
+        var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        if (!emailPattern.test(email)) {
+            document.getElementById("emailError").textContent = 'Please enter a valid email address';
+            isValid = false;
+        }
+
+        // Password validation (min length 6)
+        var password1 = document.getElementById("password1").value;
+        if (password1.length < 6) {
+            document.getElementById("passwordError").textContent = 'Password must be at least 6 characters long';
+            isValid = false;
+        }
+
+        // Confirm password validation (match check)
+        var password2 = document.getElementById("password2").value;
+        if (password1 !== password2) {
+            document.getElementById("confirmPasswordError").textContent = 'Passwords do not match';
+            isValid = false;
+        }
+
+        // If validation fails, prevent form submission
+        if (!isValid) {
+            event.preventDefault();
+        }
+    });
+
+</script>
+</body>
+
+</html>

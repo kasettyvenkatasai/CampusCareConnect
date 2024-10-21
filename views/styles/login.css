@@ -1,0 +1,202 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background: #efeeee;
+}
+
+.container {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+form {
+    background: #efeeee;
+    height: 530px;
+    width: 350px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 16px -2px wheat, -10px -10px 16px -2px #fff;
+    text-align: center;
+    padding: 2em;
+}
+
+p {
+    color: #777;
+    margin-bottom: 2em;
+    font-size: 32px;
+    font-weight: 300;
+}
+select#colleges {
+    width: 80%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    color: #333;
+    appearance: none; 
+    box-shadow: inset 4px 4px 6px wheat, inset -4px -4px 6px #fff;
+    color: #888;
+    font-family: "Poppins", sans-serif;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 14px;
+    border-radius: 5000px;
+    border: none;
+    background-color: #efeeee;
+  }
+  select#colleges::after {
+    content: '▼';
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #888;
+    border-radius: 5000px;
+    border: none;
+  }
+  select#colleges option {
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    color: #888;
+    border-radius: 5000px;
+  }
+  select#colleges:hover {
+    border-color: #888;
+    background-color: #fff;
+  }
+  
+  select#colleges:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px ;
+    margin-bottom: 14px;
+    border-radius: 5000px;
+    border: none;
+    background-color: #efeeee;
+  }
+  
+input {
+    width: 250px;
+    border: none;
+    border-radius: 5000px;
+    padding: 1.5em;
+    background: #efeeee;
+    box-shadow: inset 4px 4px 6px wheat, inset -4px -4px 6px #fff;
+    margin-bottom: 2em;
+    color: #888;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    /* font-weight: 400; */
+}
+
+input[type=submit] {
+    width: 130px;
+    box-shadow: 4px 4px 6px wheat, -4px -4px 6px #fff;
+    margin-top: 1em;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+input:hover {
+    cursor: pointer;
+}
+
+input:active {
+    box-shadow: inset 4px 4px 6px wheat, inset -4px -4px 6px #fff;
+}
+
+input:focus {
+    outline: none;
+}
+
+::-moz-placeholder {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: #aaa;
+}
+
+::placeholder {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: #aaa;
+}
+
+a {
+    text-decoration: none;
+    color:  #aaa;
+    font-size: 15px;
+    transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+    color:#777;;
+}
+
+a:active {
+    color: wheat;
+}
+
+a:focus {
+    outline: none;
+}
+.new1{
+   
+    margin-top: 0%;
+    width: 100%;
+}
+#su{
+    margin-left: 10px;
+    margin-right: 2px;
+}
+#fp{
+    margin-left: 100px;
+}
+.password {
+    position: relative;
+    width: 100% 
+  }
+  #password1 {
+    width: 250px;
+    
+
+  }
+  #lockimage {
+    width: 28px;
+    position: absolute;
+    top: 35%;
+    
+    right: 14%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  .checkbox input{
+    width: auto;
+   width: 20px;
+   height: 20px;
+    margin-left: 12%;
+    margin-right: 5%;
+   box-shadow: none;
+  color: white;
+  outline: 2px solid wheat;
+
+  
+  }
+  [type="checkbox"]{
+    accent-color: wheat;
+   
+   
+  }
+ 
+  .checkbox{
+display: flex;
+font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: #aaa;
+  }

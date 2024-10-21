@@ -1,0 +1,188 @@
+body{
+    display: flex;
+    overflow: hidden;
+    background-color: #0A7273;
+
+}
+.nonnavbar{
+    flex: 1;
+    margin-left: 15%;
+    width: 100%;
+    background-color: white;
+    border-radius:5% 0% 0% 5%;
+    
+}
+.header p{
+    font-size: 35px;
+
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 10%;
+    color: #0A7273;
+    width: 87%;
+    margin-left: 8%;
+
+}
+#send{
+    background-color: #0A7273;
+    color:white;
+    font-size: 25px;
+    border:none;
+    padding: 20px 0px;
+}
+.date{
+  
+    padding-right: 50px;
+    position: relative;
+}
+.calendar{
+    position: absolute;
+    top: 20%;
+    right: 0%;
+}
+.calendar img{
+    width: 40px;
+}
+.mainbody{
+    width: 90%;
+    height: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.div1{
+width: 95%;
+height: 15%;
+display: flex;
+align-items: center;
+background-color: whitesmoke;
+border-radius: 10px;
+box-shadow:  10px 10px 20px #bebebe,
+             -23px -23px 36px #ffffff;
+
+             transform: translateX(150%);
+
+
+}
+.div1 p{
+    font-size: 40px;
+    margin-left: 5%;
+}
+.div2{
+    width: 95%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: whitesmoke;
+border-radius: 10px;
+box-shadow:  10px 10px 20px #bebebe,
+             -23px -23px 36px #ffffff;
+             transform: translateX(150%);
+    
+    }
+    .div2 p{
+        font-size: 40px;
+       margin-right:60%;
+       
+    }
+.div2 input{
+    width: 30px;
+    height: 30px;
+    accent-color: #0A7273;
+}
+
+
+.div3{
+    width: 95%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    background-color: whitesmoke;
+border-radius: 10px;
+box-shadow:  10px 10px 20px #bebebe,
+             -23px -23px 36px #ffffff;
+             transform: translateX(150%);
+    
+    }
+    .div3 p{
+        font-size: 40px;
+        margin-left: 5%;
+    }
+    p a{
+        text-decoration: none;
+        color: black;
+      }
+      a{
+        text-decoration: none;
+        color: black;
+      }
+
+      .heading {
+        display: flex;
+        flex-direction: row;
+        width: 75%;
+        align-items: center;
+        margin-top: 7%;
+      }
+    
+      .heading svg {
+        height: 100%;
+        width: 5%;
+      }
+    
+      .calendar{
+        position: absolute;
+        top: 20%;
+        right: 0%;
+    }
+    .calendar svg{
+        margin-left: -150%;
+        margin-top: -50%;
+        height:0%;
+        width: 400%;
+    }
+
+    .i input {
+        border:1px solid #0A7273;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow:  10px 10px 20px #bebebe,
+             -23px -23px 36px #ffffff;
+    }
+    .i input:focus{
+        outline: none;
+    }
+    @keyframes slideleft{
+        from {
+            transform: translateX(400px);
+        }
+        to{
+            transform: translateX(0px);
+        }
+    }
+    @keyframes slideleft1{
+        from {
+            transform: translateX(150%);
+        }
+        to{
+            transform: translateX(0);
+        }
+    }
+    .div1{
+        animation: slideleft1 1.5s ease forwards;
+    }
+    .div2{
+        animation: slideleft1 2s ease forwards; 
+    }
+    .div3{
+        animation: slideleft1 2.5s ease forwards; 
+    }

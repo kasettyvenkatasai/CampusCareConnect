@@ -1,0 +1,219 @@
+body{
+    display: flex;
+    background-color: #0A7273;
+    overflow: hidden;
+
+}
+.nonnavbar{
+    flex: 1;
+    margin-left: 15%;
+    width: 100%;
+    background-color:whitesmoke;
+    border-left: 5px solid #0A7273;
+    border-radius:5% 0% 0% 5%;
+}
+.header p{
+    font-size: 35px;
+
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 10%;
+    color: #0A7273;
+    width: 87%;
+    margin-left: 8%;
+
+}
+.date{
+  
+    padding-right: 50px;
+    position: relative;
+}
+.calendar{
+    position: absolute;
+    top: 20%;
+    right: 0%;
+}
+.calendar svg{
+    margin-left: -150%;
+    margin-top: -50%;
+    height:0%;
+    width: 400%;
+}
+form{
+    height: 60%;
+}
+.mainbody{
+    width: 70%;
+    height: 100%;
+    color: #0A7273;
+    border: 1px solid whitesmoke;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8%;
+    border-radius: 37px;
+    box-shadow:  23px 23px 36px #bebebe,
+             -23px -23px 36px #ffffff; 
+             margin-top: 13%;
+
+    
+}
+.St{
+    display: flex;
+    align-items: center;
+    height: 13%;
+    font-size: 25px;
+}
+
+.St input{
+    font-size: 20px;
+    width:15%;
+    height: 50%;
+    text-align: end;
+    border:1px solid #0A7273;
+    border-radius: 5px;
+    color: #0A7273;
+    
+}
+select{
+    font-size: 20px;
+    width:15%;
+    height: 50%;
+    text-align: end;
+    border:1px solid #0A7273;
+    border-radius: 5px;
+    color: #0A7273;
+}
+.desc p{
+    font-size: 25px;
+}
+.desc{
+    height: 15%;
+    display: flex;
+    align-items: center;
+}
+.in {
+    height: 26%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.in input {
+    width: 90%;
+    padding-top: 5px;
+    height: 100%;
+    border-radius: 20px;
+    font-size: 25px;
+    outline: none;
+    resize: vertical;
+    
+}
+.butt{
+   height: 25%  ;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.butt button{
+    width: 20%;
+    padding: 20px 0;
+    font-size: 25px;
+    border: none;
+    background-color: #0A7273;
+    border-radius: 10px;
+    color: white;
+}
+
+.butt button:hover{
+    background-color: white;
+    color: #0A7273;
+    border: 1px solid #0A7273;
+}
+
+
+.dropdown{
+    position: relative;
+}
+.dropdown button{
+    margin: 0;
+    width: 100%;
+    padding-left: 10px;
+    padding-right:10px;
+    color: white;
+    background-color: #0A7273;
+    border-radius: 10px;
+    
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 11.9%;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 130%;
+    border-radius: 10px;
+    
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 25px;
+    top: 100px;
+  }
+  
+  .dropdown a:hover {background-color: #0A7273;color: white;}
+  
+  .show {display: block;}
+
+  .heading {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    align-items: center;
+    margin-top: 7%;
+  }
+
+  .heading svg {
+    height: 100%;
+    width: 5%;
+  }
+
+
+  .animate-up {
+    transform: translateY(-80px);
+}
+.animate-down{
+    transform: translateY(100px);
+}
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+@keyframes slideup{
+    from{
+        transform: translateY(80px);
+    }
+    to{
+        transform: translateY(-80px);
+    }
+}
+.header.slide-down {
+    animation: slideDown 1s ease forwards;
+}
+.mainbody{
+    animation: slideup 1s  ease ;
+}

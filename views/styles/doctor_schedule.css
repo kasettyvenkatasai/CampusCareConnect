@@ -1,0 +1,199 @@
+body{
+    display: flex;
+    background-color: #0A7273;
+
+}
+
+.nonnavbar{
+    margin-left: 15%;
+    width: 100%;
+    background-color: white;
+    border-radius: 5% 0% 0% 5%;
+    overflow-y: scroll;
+
+}
+
+
+.date{
+  
+    padding-right: 50px;
+    position: relative;
+}
+.calendar{
+    position: absolute;
+    top: 20%;
+    right: 0%;
+}
+.calendar img{
+    width: 40px;
+}
+.secondheader{
+    padding: 0 0 0 2.5%;
+height: 12%;
+margin-top: 0;
+display: flex;
+align-items: center;
+}
+.secondheader p{
+    font-size: 40px;
+    margin-left: 17%;
+    color: #0A7273;
+}
+.mainbody{
+    width: 70%;
+    height: 28%;
+    margin-top: 500px;
+    margin: 3% 0 40px 10%;
+    background-color: whitesmoke;
+    border-radius: 37px;
+    box-shadow:  23px 23px 36px #bebebe,
+             -23px -23px 36px #ffffff;
+             margin-left: auto;
+             margin-right: auto;
+             margin-top: 7%;
+    animation: slideup 1s ease forwards;
+}
+form{
+    height: 100%;
+}
+.header1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    height: 33%;
+    background-color: whitesmoke;
+    border-radius: 37px 37px 0 0;
+    
+}
+.header1 p{
+    font-size: 25px;
+    margin-left: 8%;
+}
+
+.St{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    height: 37%;
+   
+   font-size: 25px;
+   
+  
+    
+}
+.butt button{
+    width: 100%;
+    margin: 0;
+    padding: 1%;
+    background-color:#0A7273;
+    margin-top: 0.8%;
+    font-size: 32px;
+    border: none;
+    outline: none;
+   padding: 18px;
+   border-radius: 0 0 40px 40px;
+   color:white;
+}
+
+.butt button:hover {
+    background-color: gainsboro;
+    color: #0A7273;
+    border: 1px solid #0A7273;
+}
+.i {
+    margin: 20%;
+    margin-left: 25%;
+    margin-bottom: 5px;
+}
+
+
+.hornav{
+    
+    display: flex;
+    height: 10%;
+    margin-left: 5%;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    color: #0A7273;
+    margin-top: 25px;
+}
+.hornav p{
+    font-size: 40px;
+    
+}
+
+.sessions{
+    width: 38%;
+    height: 100%;
+    margin-top: 50px;
+    margin-left: 12%;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    height: 135%;
+    width: 38%;
+
+}
+.sessions p{
+    margin-top: 0;
+}
+.textpart1 {
+    
+    margin-bottom: 5%; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around;
+    border: 1px solid white;
+    background-color: #0A7273 ;
+    border-radius: 13px;
+    box-shadow:  15px 15px 15px #d9d9d9,
+             -7px -7px 15px #ffffff;
+    color: white;
+    height: 100%;
+    width: 90%;
+}
+
+.imgdiv svg{
+    padding-top: 5%;
+   height:50px;
+   width:70px;
+}
+
+.text{
+    display: flex;
+    flex-direction: row;
+}
+.text svg{
+    height:100%;
+    width: 400%;
+
+}
+.hornav{
+    animation: slideDown 1s ease forwards;
+}
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+@keyframes slideup{
+    0%{
+        transform: translateY(100px);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+.text4{
+    margin: 400px 500px;
+    color: #0A7273;
+    font-size: 40px;
+}

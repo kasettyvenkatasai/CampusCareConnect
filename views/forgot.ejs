@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign UP</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/signup.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <form method="post" action='/requestotp'>
+            <p>REGISTER</p>
+            <input type="email"  placeholder="email" id="" style="margin-bottom: 2rem;" name="email"><br>
+            <div class="password">
+                
+                <!--<img src="images/lock.png" alt="" class="lockimage" id="lockimage">-->
+            </div>
+            <!--<div class="password">
+                <input type="password" name="" placeholder="Confirm password" id="password2"><br>
+                <img src="images/lock.png" alt="" class="lockimage" id="lockimage1">
+            </div>-->
+            
+            <input type="submit" value="Confirm" id="confirm"><br>
+            <div class="new1">
+                <a href="#" id="su" ></a>
+            <a href="#" id="fp"></a>
+            </div>
+           
+        </form>
+    </div>
+<script>
+   
+
+    document.getElementById("confirm").addEventListener('click',function(){
+        window.location.href="forgot1.html"
+    })
+
+    
+    
+</script>
+</body>
+
+</html>

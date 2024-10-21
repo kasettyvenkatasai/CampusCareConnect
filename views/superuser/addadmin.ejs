@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign UP</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/signup.css">
+    <style>
+        /* Additional CSS for error display */
+        .error {
+            color: red;
+            font-size: 0.9rem;
+            display: none;
+            margin-bottom: 1rem;
+        }
+
+        .password {
+            position: relative;
+        }
+
+        .password input {
+            width: calc(100% - 40px);
+        }
+
+        .password img {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            width: 25px;
+            height: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <form id="signupForm" method="post" action="/suser/home1" onsubmit="return validateForm()">
+            <p>REGISTER</p>
+            <input type="email" name="email" placeholder="Email" id="email" style="margin-bottom: 2rem;" required><br>
+            <div class="error" id="emailError">Please enter a valid email address.</div>
+
+            <div>
+                <select name="college1" id="colleges" required>
+                    <% for (let index = 0; index < clgs.length; index++) { %>
+                        <option value="<%= clgs[index].name %>"><%= clgs[index].name %></option>
+                    <% } %>
+                </select>
+            </div>
+
+            <div class="password">
+                <input type="password" name="password1" placeholder="Password" id="password1" required><br>
+                <img src="/images/lock.png" alt="" class="lockimage" id="lockimage">
+            </div>
+            <div class="error" id="passwordError">Password must be at least 6 characters long.</div>
+
+            <div class="password">
+                <input type="password" name="password2" placeholder="Confirm password" id="password2" required style="width:auto"><br>
+                <img src="/images/lock.png" alt="" class="lockimage" id="lockimage1">
+            </div>
+            <div class="error" id="passwordMatchError">Passwords do not match.</div>
+
+            <input type="submit" value="SIGN UP"><br>
+
+            <div class="new1">
+                <a href="#" id="su">Sign Up</a>
+                <a href="#" id="fp">Forgot Password</a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            const email = document.getElementById("email").value;
+            const password1 = document.getElementById("password1").value;
+            const password2 = document.getElementById("password2").value;
+
+            let isValid = true;
+
+            // Reset error messages
+            document.getElementById("emailError").style.display = "none";
+            document.getElementById("passwordError").style.display = "none";
+            document.getElementById("passwordMatchError").style.display = "none";
+
+            // Email validation
+            if (!validateEmail(email)) {
+                document.getElementById("emailError").style.display = "block";
+                isValid = false;
+            }
+
+            // Password validation
+            if (password1.length < 6) {
+                document.getElementById("passwordError").style.display = "block";
+                isValid = false;
+            }
+
+            // Password match validation
+            if (password1 !== password2) {
+                document.getElementById("passwordMatchError").style.display = "block";
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        function validateEmail(email) {
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailPattern.test(email);
+        }
+
+        // Toggle password visibility
+        var passwordInput = document.getElementById("password1");
+        var togglePassword = document.getElementById("lockimage");
+        togglePassword.addEventListener("click", function() {
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                togglePassword.src = "/images/eyeopen.png"; 
+            } else {
+                passwordInput.type = "password";
+                togglePassword.src = "/images/lock.png";
+            }
+        });
+
+        var passwordInput1 = document.getElementById("password2");
+        var togglePassword1 = document.getElementById("lockimage1");
+        togglePassword1.addEventListener("click", function() {
+            if (passwordInput1.type === "password") {
+                passwordInput1.type = "text";
+                togglePassword1.src = "/images/eyeopen.png"; 
+            } else {
+                passwordInput1.type = "password";
+                togglePassword1.src = "/images/lock.png";
+            }
+        });
+    </script>
+</body>
+
+</html>

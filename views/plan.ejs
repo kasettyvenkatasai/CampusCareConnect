@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Plans</title>
+    <link rel="stylesheet" href="/styles/plans.css">
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+    }
+    
+    header {
+        background-color: #0A7273;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    
+    #container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 20px;
+    }
+    
+    
+    .plan {
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 20px;
+        width: 250px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .plan h2 {
+        color: #0A7273;
+    }
+    
+    .plan p {
+        font-size: 1rem;
+        color: #555;
+    }
+    
+    .plan ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 20px 0;
+    }
+    
+    .plan ul li {
+        padding: 5px;
+        background-color: #f9f9f9;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+    
+    .plan button {
+        background-color: #0A7273;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .plan button:hover {
+        background-color: #0A7273;
+    }
+    @media (max-width: 768px) {
+        #container {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .plan {
+            margin-bottom: 20px;
+        }
+    }
+</style>
+<body>
+    <div id="container">
+        <form method="post" action="/subscribe">
+            <div class="plan" id="three-month-plan">
+                <input type="text" hidden value="<%=collegename%>" name="clgname">
+                <input type="text" hidden value="<%=Students%>" name="students">
+                <input type="text" hidden value="<%=Doctors%>" name="doctors">
+                <input type="text" hidden value="<%=specialists%>" name="fields">
+                <input type="text" hidden value="<%=email%>" name="email">
+                <input type="text" hidden value="<%=pswrd%>" name="pswrd">
+                <input type="text" hidden value="<%=domain%>" name="domain">
+
+                <h2>3-Months Plan</h2>
+                <p>Perfect for short-term needs with access to all features.</p>
+                <ul>
+                    <li>Unlimited consultations</li>
+                    <li>Free health check-ups</li>
+                    <li>Priority support</li>
+                </ul>
+                <input type="radio" name="plan" value="3-months" id="plan-3" required>
+                <label for="plan-3">Subscribe - <%= 200*Students + 400*Doctors %>rs</label>
+            </div>
+
+            <div class="plan" id="six-month-plan">
+                <h2>6-Months Plan</h2>
+                <p>Great value for extended services and perks.</p>
+                <ul>
+                    <li>Unlimited consultations</li>
+                    <li>2 Free specialist visits</li>
+                    <li>Exclusive health tips</li>
+                </ul>
+                <input type="radio" name="plan" value="6-months" id="plan-6" required>
+                <label for="plan-6">Subscribe - <%= 2*(180*Students + 360*Doctors) %></label>
+            </div>
+
+            <div class="plan" id="one-year-plan">
+                <h2>1-Year Plan</h2>
+                <p>The best offer for long-term health management.</p>
+                <ul>
+                    <li>Unlimited consultations</li>
+                    <li>Free health diagnostics</li>
+                    <li>Annual health screening</li>
+                </ul>
+                <input type="radio" name="plan" value="1-year" id="plan-12" required>
+                <label for="plan-12">Subscribe - <%= 4*(160*Students + 320*Doctors) %>0rs</label>
+            </div>
+
+            <input type="submit" value="Proceed to Payment">
+        </form>
+    </div>
+</body>
+
+</html>

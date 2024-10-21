@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../styles/home.css">
+    <style>
+        #logout:hover{
+  cursor: pointer;
+        }
+    </style>
+    <title>Document</title>
+  
+</head>
+<body>
+    <div class="vernav" style="overflow:hidden">
+        <div class="logo">
+            <div class="userdetail">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-heart" viewBox="0 0 16 16">
+                    <path d="M9 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0m-9 8c0 1 1 1 1 1h10s1 0 1-1-1-4-6-4-6 3-6 4m13.5-8.09c1.387-1.425 4.855 1.07 0 4.277-4.854-3.207-1.387-5.702 0-4.276Z"/>
+                  </svg>
+                <div class="textpart">
+                    <p><%=email.split('@')[0]%></p>
+                    <p id="mai"><%= %></p>
+                </div>
+            </div>
+            <button id="logout">log out</button>
+        </div>
+        <div class="navbar">
+            <ul>
+                <li class="ele" style="border-right: 5px solid snow;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                        <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+                    </svg>
+                    <a id="home" href="/admin/home">Home</a>
+                </li>
+                <li class="ele" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard2-plus" viewBox="0 0 16 16">
+                        <path d="M9.5 0a.5.5 0 0 1 .5.5.5.5 0 0 0 .5.5.5.5 0 0 1 .5.5V2a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 2v-.5a.5.5 0 0 1 .5-.5.5.5 0 0 0 .5-.5.5.5 0 0 1 .5-.5z"/>
+                        <path d="M3 2.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 0 0-1h-.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1H12a.5.5 0 0 0 0 1h.5a.5.5 0 0 1 .5.5v12a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5z"/>
+                        <path d="M8.5 6.5a.5.5 0 0 0-1 0V8H6a.5.5 0 0 0 0 1h1.5v1.5a.5.5 0 0 0 1 0V9H10a.5.5 0 0 0 0-1H8.5z"/>
+                      </svg>
+                      <a href="/adminpatients">Patients</a>
+                </li>
+                <li class="ele">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard2-pulse" viewBox="0 0 16 16">
+                        <path d="M9.5 0a.5.5 0 0 1 .5.5.5.5 0 0 0 .5.5.5.5 0 0 1 .5.5V2a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 2v-.5a.5.5 0 0 1 .5-.5.5.5 0 0 0 .5-.5.5.5 0 0 1 .5-.5z"/>
+                        <path d="M3 2.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 0 0-1h-.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1H12a.5.5 0 0 0 0 1h.5a.5.5 0 0 1 .5.5v12a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5z"/>
+                        <path d="M9.979 5.356a.5.5 0 0 0-.968.04L7.92 10.49l-.94-3.135a.5.5 0 0 0-.926-.08L4.69 10H4.5a.5.5 0 0 0 0 1H5a.5.5 0 0 0 .447-.276l.936-1.873 1.138 3.793a.5.5 0 0 0 .968-.04L9.58 7.51l.94 3.135A.5.5 0 0 0 11 11h.5a.5.5 0 0 0 0-1h-.128z"/>
+                      </svg>
+                      <a href="/admindoctor">Doctors</a>
+                </li>
+                <li class="ele">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+                        <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
+                        <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/>
+                      </svg>
+                    <a href="/adminreport">Reports</a>
+                </li>
+               
+               
+               
+                
+            </ul>
+        </div>
+        <div class="iiit" >
+            <div class="userdetail" style="margin-top:25%" >
+                <img src="../images/<%=college%>.png" alt="image">
+                <div class="textpart" style="display: flex;align-items:center;">
+                    <p style="padding-left: 1px;"><%=college.toUpperCase()%></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nonnavbar" >
+        
+        <div class="hornav">
+            <div class="home">
+                
+               <p style="margin-left:37.5%;font-size: 3.5rem;">Home</p>
+                
+            </div>
+            
+            <div class="dates">
+                <div class="text">
+                   <div class="date">
+                     <p ID="date" style="text-align: end;"></p>
+                     <p id="time"></p> 
+                   </div>
+                   <div class="icon" style="margin-left: 10px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-check" viewBox="0 0 16 16">
+                        <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+                        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
+                      </svg>
+                    </div>
+                
+                </div>
+            
+            
+            </div>
+        </div>
+        <div class="welcome" style=" background-image: url('../images/bg6.jpeg');
+    background-size:cover;
+    background-position:middle;color:white" >
+        <p style="color:white"><span style="font-size: 5rem;">Welcome back</span> <br> Admin  <br> Track your Students and doctors</p>
+        </div>
+       
+        <div class="dashboard" style="margin-top:50px">
+            
+                <p style="font-size: 40px;">Dashboard</p>
+                
+                <div class="schedule">
+                    <table>
+                        <tr>
+                            <th>No of students</th>
+                            <th style="border-radius: 0px 50px 0px 0px;">No of doctors </th>
+                            
+                        </tr>
+
+                        <tr>
+                            <td style="border-radius: 0px 0px 0px 50px;" id="students"><%= %></td>
+                            <td style="border-radius: 0px 0px 50px 0px;" id="doctors"><%= %></td>
+                            
+                        </tr>
+                        
+                    </table>
+                </div>
+                
+    
+                
+            </div>  
+        <div class="nofi">
+            <div class="sessions">
+                <div class="textpart1">
+                    <div class="textdiv">
+                        <p style="font-size: 45px;" id="comapp"><%= %></p>
+                        <p style="font-size: 26px;">Completed Appointments</p>
+                    </div>
+                    
+                    <div class="imgdiv">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-pulse" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M10 1.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5zm-5 0A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5v1A1.5 1.5 0 0 1 9.5 4h-3A1.5 1.5 0 0 1 5 2.5zm-2 0h1v1H3a1 1 0 0 0-1 1V14a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V3.5a1 1 0 0 0-1-1h-1v-1h1a2 2 0 0 1 2 2V14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3.5a2 2 0 0 1 2-2m6.979 3.856a.5.5 0 0 0-.968.04L7.92 10.49l-.94-3.135a.5.5 0 0 0-.895-.133L4.232 10H3.5a.5.5 0 0 0 0 1h1a.5.5 0 0 0 .416-.223l1.41-2.115 1.195 3.982a.5.5 0 0 0 .968-.04L9.58 7.51l.94 3.135A.5.5 0 0 0 11 11h1.5a.5.5 0 0 0 0-1h-1.128z"/>
+                          </svg>
+                    </div>
+                    
+                </div>
+            </div>
+            
+                <div class="sessions" style="margin-top:-150px">
+                    <div class="textpart1">
+                        <div class="textdiv">
+                            <p style="font-size: 45px;" id="upcomapp"><%= %></p>
+                            <p style="font-size: 26px;">upcomig appointments</p>
+                        </div>
+                        
+                        <div class="imgdiv">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-pulse" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M10 1.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5zm-5 0A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5v1A1.5 1.5 0 0 1 9.5 4h-3A1.5 1.5 0 0 1 5 2.5zm-2 0h1v1H3a1 1 0 0 0-1 1V14a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V3.5a1 1 0 0 0-1-1h-1v-1h1a2 2 0 0 1 2 2V14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3.5a2 2 0 0 1 2-2m6.979 3.856a.5.5 0 0 0-.968.04L7.92 10.49l-.94-3.135a.5.5 0 0 0-.895-.133L4.232 10H3.5a.5.5 0 0 0 0 1h1a.5.5 0 0 0 .416-.223l1.41-2.115 1.195 3.982a.5.5 0 0 0 .968-.04L9.58 7.51l.94 3.135A.5.5 0 0 0 11 11h1.5a.5.5 0 0 0 0-1h-1.128z"/>
+                              </svg>
+                        </div>
+                        
+                    </div>
+              
+            
+            
+            
+            
+        </div>
+            
+        
+        
+       
+    </div>
+    <script>
+        var date = new Date();
+        var month = date.getMonth()+1
+        document.getElementById("date").textContent=date.getFullYear() +"-" + month +"-"+date.getDate();
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+          }
+          window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+              var dropdowns = document.getElementsByClassName("dropdown-content");
+              var i;
+              for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                  openDropdown.classList.remove('show');
+                }
+              }
+            }
+          }
+
+          function displayTime() {
+    var now = new Date();
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
+    var meridiem = hours >= 12 ? "PM" : "AM";
+    hours = hours % 12;
+    hours = hours ? hours : 12; 
+    hours = (hours < 10 ? "0" : "") + hours;
+    minutes = (minutes < 10 ? "0" : "") + minutes;
+    seconds = (seconds < 10 ? "0" : "") + seconds;
+    
+    var timeString = hours + "." + minutes + "." + seconds + " " + meridiem;
+    document.getElementById("time").textContent = timeString;
+}
+displayTime();
+setInterval(displayTime, 1000)
+document.getElementById('logout').onclick = function(){
+    window.location.href='/clearcookie'
+}
+document.getElementById('home').onclick = function(){
+    window.localStorage.href='/admin/home'
+}
+
+document.getElementById("appointment").onclick=function(){
+    window.location.href='/student/appointment'
+}
+document.getElementById("schedule").onclick=function(){
+    window.location.href='/student/schedule'
+}
+document.getElementById("bookings").onclick=function(){
+    window.location.href='/student/bookings'
+}
+document.getElementById("settings").onclick=function(){
+    window.location.href='/student/settings'
+}
+        
+    </script>
+    <script>
+        let xhr =new XMLHttpRequest()
+       xhr.onreadystatechange = function(){
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            
+            const data = JSON.parse(xhr.responseText)
+            const email = data.email
+            document.getElementById('mai').innerHTML = email
+            document.getElementById('students').innerHTML = data.students.length
+            document.getElementById('doctors').innerHTML = data.doctors.length
+            document.getElementById('comapp').innerHTML = data.comapp.length
+            document.getElementById('upcomapp').innerHTML = data.upcomapp.length
+        }}
+        xhr.open('GET', '/getadmindetails', true);
+        xhr.send();
+        console.log('sent')
+    </script>
+</body>
+</html>

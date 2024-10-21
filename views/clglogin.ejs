@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign UP</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* styles/form1.css */
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            max-width: 100%;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form p {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        input[type="text"], input[type="number"], input[type="email"], input[type="password"] {
+            padding: 10px;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #5cb85c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            background-color: #4cae4c;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .input-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .add-button {
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-left: 10px;
+        }
+
+        .add-button:hover {
+            background-color: #0056b3;
+        }
+
+        .clear-button {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .clear-button:hover {
+            background-color: #c82333;
+        }
+
+        .array-display {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .password {
+            position: relative;
+        }
+
+        .password input {
+            width: calc(100% - 40px);
+        }
+
+        .password img {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            width: 25px;
+            height: 25px;
+        }
+
+        .error {
+            color: red;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <form id="collegeForm" action="/register" method="post" onsubmit="validateForm(event)">
+            <p>Register Your College</p>
+            <input type="text" name="collegename" placeholder="College Name" required><br>
+            <input type="number" name="Students" placeholder="Max no of Students" required><br>
+            <input type="number" name="Doctors" placeholder="Max no of Doctors" required><br>
+            <input type="text" name="domain" placeholder="Enter Domain" required><br>
+
+            <div class="input-wrapper">
+                <input type="text" id="arrayInput" placeholder="Enter an array element">
+                <button class="add-button" onclick="addElement(event)">+</button>
+            </div>
+            <button class="clear-button" onclick="removeLastElement(event)">Remove Last</button>
+
+            <p class="array-display">Specialists: <span id="arrayDisplay">[]</span></p>
+            <div class="error" id="arrayError">Please add at least one specialist.</div>
+
+            <input type="hidden" name="specialistsArray" id="specialistsArray">
+
+            <p>Enter details of your Admin</p>
+            <input type="email" name="email" placeholder="Enter email" required><br>
+            <div class="password">
+                <input type="password" name="pswrd" placeholder="Password" id="password1" required><br>
+                <img src="/images/lock.png" alt="" class="lockimage" id="lockimage">
+            </div>
+            <div class="password">
+                <input type="password" name="confirm_pswrd" placeholder="Confirm password" id="password2" required><br>
+                <img src="/images/lock.png" alt="eye" class="lockimage" id="lockimage1">
+            </div>
+            <div class="error" id="passwordError">Passwords do not match.</div>
+
+            <input type="submit" value="Register Now"><br>
+        </form>
+    </div>
+
+    <script>
+        let array = [];
+
+        function addElement(event) {
+            event.preventDefault(); 
+            const input = document.getElementById("arrayInput").value;
+            if (input) {
+                array.push(input);  
+                document.getElementById("arrayInput").value = "";  
+                document.getElementById("arrayDisplay").innerText = JSON.stringify(array);  
+                document.getElementById("arrayError").style.display = "none"; 
+            }
+        }
+
+        function removeLastElement(event) {
+            event.preventDefault(); 
+            if (array.length > 0) {
+                array.pop();  
+                document.getElementById("arrayDisplay").innerText = JSON.stringify(array);  
+            }
+        }
+
+        function validateForm(event) {
+            // Password validation
+            const password1 = document.getElementById("password1").value;
+            const password2 = document.getElementById("password2").value;
+            if (password1 !== password2) {
+                document.getElementById("passwordError").style.display = "block";
+                event.preventDefault();
+                return false;
+            } else {
+                document.getElementById("passwordError").style.display = "none";
+            }
+
+            // Array validation
+            if (array.length === 0) {
+                document.getElementById("arrayError").style.display = "block";
+                event.preventDefault();
+                return false;
+            }
+
+            // Prepare array for submission
+            const hiddenInput = document.getElementById("specialistsArray");
+            hiddenInput.value = JSON.stringify(array);  
+        }
+
+        // Toggle password visibility
+        var passwordInput = document.getElementById("password1");
+        var togglePassword = document.getElementById("lockimage");
+        togglePassword.addEventListener("click", function() {
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                togglePassword.src = "/images/eyeopen.png"; 
+            } else {
+                passwordInput.type = "password";
+                togglePassword.src = "/images/lock.png";
+            }
+        });
+
+        var passwordInput1 = document.getElementById("password2");
+        var togglePassword1 = document.getElementById("lockimage1");
+        togglePassword1.addEventListener("click", function() {
+            if (passwordInput1.type === "password") {
+                passwordInput1.type = "text";
+                togglePassword1.src = "/images/eyeopen.png"; 
+            } else {
+                passwordInput1.type = "password";
+                togglePassword1.src = "/images/lock.png";
+            }
+        });
+    </script>
+</body>
+
+</html>

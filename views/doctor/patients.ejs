@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/navbar.css">
+    <link rel="stylesheet" href="/styles/patients.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="vernav">
+        <div class="logo">
+            <div class="userdetail">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-heart" viewBox="0 0 16 16">
+                    <path d="M9 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0m-9 8c0 1 1 1 1 1h10s1 0 1-1-1-4-6-4-6 3-6 4m13.5-8.09c1.387-1.425 4.855 1.07 0 4.277-4.854-3.207-1.387-5.702 0-4.276Z"/>
+                  </svg>
+                <div class="textpart">
+                    <p><%= createdy.split('.')[0]%></p>
+                    <p><%=createdy%></p>
+                </div>
+                
+            </div>
+            <button id="logout">log out</button>
+        </div>
+        <div class="navbar">
+            <ul>
+                <li class="ele" style="padding-top: 0;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                        <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+                    </svg>
+                    <a id="doctor_home">Home</a>
+                </li>
+                <li class="ele">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard2-plus" viewBox="0 0 16 16">
+                        <path d="M9.5 0a.5.5 0 0 1 .5.5.5.5 0 0 0 .5.5.5.5 0 0 1 .5.5V2a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 2v-.5a.5.5 0 0 1 .5-.5.5.5 0 0 0 .5-.5.5.5 0 0 1 .5-.5z"/>
+                        <path d="M3 2.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 0 0-1h-.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1H12a.5.5 0 0 0 0 1h.5a.5.5 0 0 1 .5.5v12a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5z"/>
+                        <path d="M8.5 6.5a.5.5 0 0 0-1 0V8H6a.5.5 0 0 0 0 1h1.5v1.5a.5.5 0 0 0 1 0V9H10a.5.5 0 0 0 0-1H8.5z"/>
+                      </svg>
+                    <a id="Doctor_SS">New Bookings</a>
+                </li>
+                <li class="ele">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard2-pulse" viewBox="0 0 16 16">
+                        <path d="M9.5 0a.5.5 0 0 1 .5.5.5.5 0 0 0 .5.5.5.5 0 0 1 .5.5V2a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 2v-.5a.5.5 0 0 1 .5-.5.5.5 0 0 0 .5-.5.5.5 0 0 1 .5-.5z"/>
+                        <path d="M3 2.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 0 0-1h-.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1H12a.5.5 0 0 0 0 1h.5a.5.5 0 0 1 .5.5v12a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5z"/>
+                        <path d="M9.979 5.356a.5.5 0 0 0-.968.04L7.92 10.49l-.94-3.135a.5.5 0 0 0-.926-.08L4.69 10H4.5a.5.5 0 0 0 0 1H5a.5.5 0 0 0 .447-.276l.936-1.873 1.138 3.793a.5.5 0 0 0 .968-.04L9.58 7.51l.94 3.135A.5.5 0 0 0 11 11h.5a.5.5 0 0 0 0-1h-.128z"/>
+                      </svg>
+                      <a id="doctor_schedule">Schedule sessions</a>
+                </li>
+                <li class="ele"style="border-right: 5px solid snow;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-wheelchair" viewBox="0 0 16 16">
+                        <path d="M12 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3m-.663 2.146a1.5 1.5 0 0 0-.47-2.115l-2.5-1.508a1.5 1.5 0 0 0-1.676.086l-2.329 1.75a.866.866 0 0 0 1.051 1.375L7.361 3.37l.922.71-2.038 2.445A4.73 4.73 0 0 0 2.628 7.67l1.064 1.065a3.25 3.25 0 0 1 4.574 4.574l1.064 1.063a4.73 4.73 0 0 0 1.09-3.998l1.043-.292-.187 2.991a.872.872 0 1 0 1.741.098l.206-4.121A1 1 0 0 0 12.224 8h-2.79zM3.023 9.48a3.25 3.25 0 0 0 4.496 4.496l1.077 1.077a4.75 4.75 0 0 1-6.65-6.65z"/>
+                      </svg>
+                      <a id="patients">My Patients</a>
+                    </li>
+                <li class="ele">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+                        <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
+                        <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/>
+                      </svg>
+                      <a id="doctor_settings">Settings</a>
+                </li>
+               </ul>
+        </div>
+        <div class="iiit" >
+            <div class="userdetail" >
+                <img src="/images/<%=clg%>.png" alt="">
+                <div class="textpart" style="display: flex;align-items:center;">
+                    <p><%=clg%></p>
+                    
+                </div>
+        </div>
+      
+    </div>
+    </div>
+    <div class="nonnavbar">
+        <div class="hornav">
+            <div class="sessions" style="margin-top: 2%;">
+                <div class="textpart1">
+                    <div class="textdiv">
+                        <p style="font-size: 30px;">Patients List</p>
+                    </div>
+                    
+                    <div class="imgdiv">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                            <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"/>
+                          </svg>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="dates">
+                <div class="text">
+                   <div class="date">
+                     <p ID="date" style="text-align: end;"></p>
+                     <p id="time"></p> 
+                   </div>
+                   <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-check" viewBox="0 0 16 16">
+                        <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+                        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
+                      </svg>
+                    </div>
+                
+                </div>
+            
+            
+            </div>
+        </div>
+        <div class="secondheader" style="position:relative">
+            <div class="name">
+                <input type="name" placeholder="Name" readonly>
+             
+            </div>
+            <div class="name" style="width:8.2%">
+                <input type="text" style="padding-left:55%" placeholder="mail" readonly>
+               
+            </div>
+            <div class="name" style="width: 14%;margin-right:3%">
+                <input style="padding-left: 20%;" type="text" placeholder="last visited" readonly> 
+               
+            </div>
+            
+
+           
+        </div>
+        
+        
+       
+        <% if (appointments.length>0) { %>
+         <% for( let i = 0; i < appointments.length; i++ ) { %>
+            <div class="mainbody" onclick="toggleDropdown(this)">
+                <div class="userdet">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                    </svg>
+                    <p><%= appointments[i].createdy.split('.')[0] %></p>
+                </div>
+                <div class="ug">
+                    <p><%= appointments[i].createdy %></p> 
+                </div>
+                <div class="history">
+                    <p><%= appointments[i].date.getDate() + "-" + appointments[i].date.getMonth() + "-" + appointments[i].date.getFullYear() %> / <%= appointments[i].time %></p>
+                </div>
+            </div>
+            <div class="dropdown" style="display:none;">
+                <form id="appointmentForm" method="post" action="/createmedication">
+                    
+                   <input type="hidden" value="<%=appointments[i].createdy%>" name="createdby">
+                    
+                    <input type="hidden" value="<%=appointments[i]._id%> " name="bookedon">
+                    <table>
+                        <tr>
+                            <td><input class="sno" type="text" placeholder="Sno" name="sno1"></td>
+                            <td><input class="medicine" type="text" placeholder="Medicine" name="medicine1"></td>
+                            <td><input class="timings" type="text" placeholder="Timings" name="timings1"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="sno" type="text" placeholder="Sno" name="sno2"></td>
+                            <td><input class="medicine" type="text" placeholder="Medicine" name="medicine2"></td>
+                            <td><input class="timings" type="text" placeholder="Timings" name="timings2"></td>
+                        </tr>
+                    </table>
+                    <button type="submit" id="formsubmit">Submit</button>
+                </form>
+            </div>
+            
+            
+         <% } %>
+        <% } else { %>
+
+            <p class="mainbody1">No History avaliable</p>
+            <%}%>
+       
+        
+    </div>
+    <script>
+        function toggleDropdown(element) {
+            var dropdown = element.nextElementSibling;
+            dropdown.style.display === "none" ? dropdown.style.display = "block" : dropdown.style.display = "none";
+        }
+        
+        function submitForm() {
+            var inputs = document.querySelectorAll('.dropdown input');
+            var inputData = [];
+            inputs.forEach(function(input) {
+                inputData.push(input.value);
+            }); 
+            console.log(inputData);
+        }
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            var date = new Date();
+            var month = date.getMonth() + 1;
+            document.getElementById("date").textContent = date.getFullYear() + "-" + month + "-" + date.getDate();
+
+            function myFunction() {
+                document.getElementById("myDropdown").classList.toggle("show");
+            }
+
+            window.onclick = function(event) {
+                if (!event.target.matches('.dropbtn')) {
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                        }
+                    }
+                }
+            }
+            function displayTime() {
+                var now = new Date();
+                var hours = now.getHours();
+                var minutes = now.getMinutes();
+                var seconds = now.getSeconds();
+                var meridiem = hours >= 12 ? "PM" : "AM";
+                hours = hours % 12;
+                hours = hours ? hours : 12;
+                hours = (hours < 10 ? "0" : "") + hours;
+                minutes = (minutes < 10 ? "0" : "") + minutes;
+                seconds = (seconds < 10 ? "0" : "") + seconds;
+                var timeString = hours + "." + minutes + "." + seconds + " " + meridiem;
+                document.getElementById("time").textContent = timeString;
+            }
+            displayTime();
+            setInterval(displayTime, 1000);
+            document.getElementById('logout').onclick = function(){
+                window.location.href='/logout'
+            }
+
+            document.getElementById('doctor_home').onclick = function() {
+                window.location.href = '/doctor/home';
+            };
+
+            document.getElementById('doctor_schedule').onclick = function() {
+                window.location.href = '/doctor/schedule';
+            };
+
+            document.getElementById('doctor_settings').onclick = function() {
+                window.location.href = '/doctor/settings';
+            };
+
+            document.getElementById('Doctor_SS').onclick = function() {
+                window.location.href = '/doctor/schedule_sessions';
+            };
+
+            document.getElementById('patients').onclick = function() {
+                window.location.href = '/doctor/patients';
+            };
+        });
+    </script>
+</body>
+</html>

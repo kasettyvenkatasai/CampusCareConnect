@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/aboutus.css">
+    <script src="aboutus.js"></script>
+</head>
+<body>
+    <h2 style="text-align: center;font-size:40px">Team Members</h2>
+    
+    <div class="maindiv">
+        <div class="left" id="left"> 
+            <img src="images/left.png" alt="">
+        </div>
+        <div class="di">
+            <div class="photo">
+                <img src="images/user.jpg" alt="" id="image">
+            </div>
+            <div class="details">
+                <h2>name: <span id="name">Ch.Druva kanth</span></h2>
+                <h2>Roll No. <span id="rollno">S20220010049</span></h2>
+                <h2>Mail : <a id="mail" href="mailto:Druvakanth.c22@iiits.in">Druvakanth.c22@iiits.in</a></h2>
+                <h2>Number : <span id="number">1234567890</span></h2>
+            </div>
+        </div> 
+        <div class="right" id="Right">
+            <img src="images/right.png" alt="">
+        </div>
+    </div>
+    <div class="about">
+        <h1>About Us</h1>
+        <p>Welcome to our online medical doctor appointment system tailored exclusively for college students! We understand the unique needs and challenges that students face when it comes to accessing healthcare services, especially amidst their busy academic schedules. That's why we've created a convenient and user-friendly platform to bridge the gap between colleges and medical professionals. </p>
+        <p>Our journey began with a simple yet profound mission: to provide students with easy access to quality healthcare services right within their college campuses. We recognized the importance of timely medical attention and sought to streamline the process of scheduling doctor appointments to ensure students receive the care they need, when they need it.</p>
+        <p>Our team is comprised of passionate individuals who share a common goal: to improve student health and well-being. From software engineers to medical professionals, each member brings unique expertise to the table, enabling us to develop innovative solutions tailored specifically for college communities.</p>
+        <p>At <b>MEDICORUM</b>, we are committed to revolutionizing the way students access healthcare services. Through our intuitive online platform, students can conveniently schedule appointments with medical professionals, track their medical history, and receive timely reminders for upcoming appointments.</p>
+        <p>We firmly believe that every student deserves access to quality healthcare, and we are dedicated to making that a reality. By partnering with colleges and medical professionals, we aim to create a seamless healthcare experience for students, empowering them to prioritize their health and succeed academically.
+        </p>
+        <p>Thank you for choosing MEDICORUM for your medical appointment needs. We are excited to serve you and your college community, and we look forward to supporting your health and well-being throughout your academic journey!</p>
+    </div>
+    
+
+   
+
+    <script>
+        var names = ["K.Sandeep kumar", "P.Manoj Kumar", "G.Vamsi", "Ch.Druva kanth", "K.Venkata Sai"];
+        var rollnos = ['S20220010118', 'S20220010173', 'S20220010074', 'S20220010049', 'S20220010100'];
+        var mails = ['sandeeepkumar.k22@iiits.in', 'manojkumar.p22@iiits.in', 'vamsi.g22@iiits.in', 'druvakanth.c22@iiits.in', 'venkatasai.k22@iiits.in'];
+        var numbers = ['1234567890', '1234567890', '1234567890', '1234567890', '1234567890'];
+        var images = ['images/user3.png','images/user1.png','images/user2.png','images/user.jpg','images/user4.png']
+        
+        var position = 3;
+        var nameElement = document.querySelector('#name');
+        var rollnoElement = document.querySelector('#rollno');
+        var mailElement = document.querySelector('#mail');
+        var numberElement = document.querySelector('#number');
+        document.getElementById("left").addEventListener("click", function () {
+            position = (position - 1 + names.length) % names.length; 
+            nameElement.textContent = names[position];
+            rollnoElement.textContent = rollnos[position];
+            mailElement.textContent = mails[position];
+            mailElement.href="mailto:"+mails[position]
+            numberElement.textContent = numbers[position];
+            document.getElementById('image').src = images[position]
+        });
+        document.getElementById("Right").addEventListener("click", function () {
+            position = (position + 1 + names.length) % names.length; 
+            nameElement.textContent = names[position];
+            rollnoElement.textContent = rollnos[position];
+            mailElement.textContent = mails[position];
+            mailElement.href="mailto:"+mails[position]
+            numberElement.textContent = numbers[position];
+            document.getElementById('image').src = images[position]
+        });
+    </script>
+</body>
+</html>

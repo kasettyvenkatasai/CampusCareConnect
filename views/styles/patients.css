@@ -1,0 +1,259 @@
+body{
+    display: flex;
+    overflow: hidden;
+    background-color: #0A7273;
+}
+.nonnavbar{
+    margin-left: 15%;
+    width: 100%;
+    background-color: white;
+    border-radius: 5% 0% 0% 5%;
+   
+
+}
+
+.date{
+  
+    padding-right: 50px;
+    position: relative;
+}
+.calendar{
+    position: absolute;
+    top: 20%;
+    right: 0%;
+}
+
+.textpart1{
+    display: flex;
+    border: 1px solid black;
+    padding: 0px 10px;
+    align-items: center;
+}
+.textpart1 img{
+    width: 50px;
+    margin-left: 10px;
+    border: 1px solid black;
+}
+.secondheader{
+    height: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5%;
+    
+}
+
+.secondheader input:focus{
+    outline: none;
+}
+.name{
+    width: 10%;
+    height: 60%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border:none;
+    
+}
+.name input{
+    width: 100%;
+    height: 100%;
+    padding-left: 50px;
+    font-size: 25px;
+    border:none;
+}
+.logo1{
+    position: absolute;
+    top: 0;
+    width: 30px;
+    
+}
+.logo1 svg{
+    margin-top: 5px;
+    height: 30px;
+   width: 45px;
+}
+.name p{
+    padding-left: 40%;
+    font-size: 32px;
+    width: 100%;
+    
+}
+.mainbody{
+    width: 90%;
+    height: 9%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 120px ;
+    background-color: whitesmoke;
+    color: #0A7273;
+    box-shadow:  10px 10px 36px #bebebe,
+    -10px -10px 36px #ffffff;
+}
+.dropdown{
+    width: 90%;
+    height: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 0;
+    background-color: whitesmoke;
+    color: #0A7273;
+    box-shadow:  10px 10px 36px #bebebe,
+    -10px -10px 36px #ffffff;
+}
+table{
+    height: 70%;
+  
+}
+.sno{
+width: 100%;
+height: 100%;
+font-size: 25px;
+}
+.medicine{
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+}
+.timings{
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+}
+#formsubmit{
+    width: 20%;
+}
+.mainbody:hover {
+    background-color: #0A7273;
+    color:whitesmoke;
+}
+.userdet{
+    height: 100%;
+    display: flex;
+   align-items: center;
+   margin-left: -5%;
+   border-right: 10px soild gainsboro;
+}
+.userdet p{
+font-size: 25px;
+padding-left: 10px;
+}
+.userdet svg{
+    height: 50px;
+    width: 40px;
+    border-radius: 50%;
+}
+.ug{text-align: center;
+    font-size: 25px;
+    width: 40%;
+    margin-left: 1%;
+    padding-left:10%;
+    padding-right: 10%;
+    border-right: 1px solid gainsboro;
+    border-left: 1px solid gainsboro;
+}
+.history p{
+    font-size: 25px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.hornav{
+    
+    display: flex;
+    height: 10%;
+    margin-left: 5%;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    color: #0A7273;
+    margin-top: 25px;
+}
+.hornav p{
+    font-size: 40px;
+    
+}
+
+.sessions{
+    width: 38%;
+    height: 100%;
+    margin-top: 50px;
+    margin-left: 3%;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    height: 135%;
+    width: 38%;
+
+}
+.sessions p{
+    margin-top: 0;
+}
+.textpart1 {
+    border: none;
+    margin-bottom: 5%; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around;
+    background-color: #0A7273 ;
+    border-radius: 13px;
+    box-shadow:  15px 15px 15px #d9d9d9,
+             -7px -7px 15px #ffffff;
+    color: white;
+    height: 100%;
+    width: 90%;
+}
+
+.imgdiv svg{
+    padding-top: 5%;
+   height:50px;
+   width:70px;
+}
+
+.text{
+    display: flex;
+    flex-direction: row;
+}
+.text svg{
+    height:100%;
+    width: 400%;
+
+}
+.hornav{
+    animation: slideDown 1s ease forwards;
+}
+.mainbody{
+    animation: slideup 1s ease forwards;
+}
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+@keyframes slideup{
+    0%{
+        transform: translateY(100px);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+.mainbody1{
+    margin: 250px 600px;
+    color: #0A7273;
+    font-size: 40px;
+}

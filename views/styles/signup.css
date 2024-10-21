@@ -1,0 +1,233 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background: #efeeee;
+}
+
+.container {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 50%;
+}
+
+form {
+    background: #efeeee;
+    height: 600px;
+    width: 350px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 16px -2px wheat, -10px -10px 16px -2px #fff;
+    text-align: center;
+    padding: 1.5em;
+}
+
+p {
+    color: #777;
+    margin-bottom: 1.5em;
+    font-size: 32px;
+    font-weight: 300;
+}
+select#colleges {
+    width: 80%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    color: #333;
+    appearance: none; 
+    box-shadow: inset 4px 4px 6px wheat, inset -4px -4px 6px #fff;
+    color: #888;
+    font-family: "Poppins", sans-serif;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 14px;
+    border-radius: 5000px;
+    border: none;
+    background-color: #efeeee;
+  }
+  select#colleges::after {
+    content: '▼';
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #888;
+    border-radius: 5000px;
+    border: none;
+  }
+  select#colleges option {
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    color: #888;
+    border-radius: 5000px;
+  }
+  select#colleges:hover {
+    border-color: #888;
+    background-color: #fff;
+  }
+  
+  select#colleges:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px ;
+    margin-bottom: 14px;
+    border-radius: 5000px;
+    border: none;
+    background-color: #efeeee;
+  }
+
+  
+input {
+    width: 250px;
+    border: none;
+    border-radius: 5000px;
+    padding: 1.5em;
+    background: #efeeee;
+    box-shadow: inset 4px 4px 6px wheat, inset -4px -4px 6px #fff;
+    margin-bottom: 2em;
+    color: #888;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    
+}
+
+input[type=submit]{
+    width: 130px;
+    box-shadow: 4px 4px 6px wheat, -4px -4px 6px #fff;
+    margin-top: 2em;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+input:hover {
+    cursor: pointer;
+}
+
+input:active {
+    box-shadow: inset 4px 4px 6px wheat, inset -4px -4px 6px #fff;
+}
+
+input:focus {
+    outline: none;
+}
+
+::-moz-placeholder {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: #aaa;
+}
+
+::placeholder {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: #aaa;
+}
+
+a {
+    text-decoration: none;
+    color:  #aaa;
+    font-size: 15px;
+    transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+    color:#777;;
+}
+
+a:active {
+    color: wheat;
+}
+
+a:focus {
+    outline: none;
+}
+.new1{
+   
+    margin-top: 5%;
+    width: 100%;
+}
+#su{
+    margin-left: 10px;
+    margin-right: 2px;
+}
+#fp{
+    margin-left: 100px;
+}
+.password {
+    position: relative;
+    width: 100% 
+  }
+  #password1 {
+    width: 250px;
+    
+  }
+  .lockimage {
+    width: 28px;
+    position: absolute;
+    top: 35%;
+    
+    right: 14%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  #fields{
+    color: #777;
+    margin-bottom: 2em;
+    font-size: 28px;
+    font-weight: 300;
+  }
+  #interests{
+    width: 250px;
+    border: none;
+    border-radius: 5000px;
+    padding: 1.5em;
+    background: #efeeee;
+    box-shadow: inset 4px 4px 6px wheat, inset -4px -4px 6px #fff;
+    margin-bottom: 2em;
+    color: #888;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+  }
+  #second {
+    display: flex;
+    align-items: center;
+    margin-top: 2%;
+}
+
+#interests {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 2px 2px 5px #ddd, inset -2px -2px 5px #fff;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#add-interest-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px #ddd, -2px -2px 5px #fff;
+    transition: background-color 0.3s ease;
+}
+
+#add-interest-btn:hover {
+    background-color: #0056b3;
+}
+
+#add-interest-btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px #007bff;
+}

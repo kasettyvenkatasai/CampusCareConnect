@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Password</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/signup.css">
+    <style>
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+
+        .success {
+            color: green;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <form method="post" action="/confirmchangepassword1" id="passwordForm">
+            <p>CHANGE PASSWORD</p>
+
+            <div class="password">
+                <input type="password" name="password1" placeholder="New password" id="password1"><br>
+                <img src="images/lock.png" alt="" class="lockimage" id="lockimage1">
+                <span id="password1Error" class="error"></span> <!-- Error message -->
+            </div>
+
+            <div class="password">
+                <input type="password" name="password2" placeholder="Confirm Password" id="password2"><br>
+                <img src="images/lock.png" alt="" class="lockimage" id="lockimage2">
+                <span id="password2Error" class="error"></span> <!-- Error message -->
+            </div>
+
+            <input type="submit" value="Submit" id="submitBtn"><br>
+
+            <div class="new1">
+                <a href="#" id="su"></a>
+                <a href="#" id="fp"></a>
+            </div>
+        </form>
+    </div>
+
+<script>
+// Toggle password visibility for both fields
+var togglePassword = function (inputId, imgId) {
+    var passwordInput = document.getElementById(inputId);
+    var toggleImg = document.getElementById(imgId);
+    
+    toggleImg.addEventListener("click", function () {
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            toggleImg.src = "images/eyeopen.png";
+        } else {
+            passwordInput.type = "password";
+            toggleImg.src = "images/lock.png";
+        }
+    });
+};
+
+togglePassword("password1", "lockimage1");
+togglePassword("password2", "lockimage2");
+
+// Password validation function
+function validatePassword(password) {
+    // Regex to check for at least one special character, one uppercase letter, one lowercase letter, and at least 8 characters
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    return passwordRegex.test(password);
+}
+
+// Real-time validation function
+document.getElementById("passwordForm").addEventListener("submit", function(event) {
+    const password1 = document.getElementById("password1").value;
+    const password2 = document.getElementById("password2").value;
+    const password1Error = document.getElementById("password1Error");
+    const password2Error = document.getElementById("password2Error");
+    let valid = true;
+    
+    // Reset previous error messages
+    password1Error.innerText = "";
+    password2Error.innerText = "";
+
+    // Check if passwords are empty
+    if (password1 === "") {
+        password1Error.innerText = "Password cannot be empty";
+        valid = false;
+    }
+
+    if (password2 === "") {
+        password2Error.innerText = "Confirm password cannot be empty";
+        valid = false;
+    }
+
+    // Validate password against the regex
+    if (!validatePassword(password1)) {
+        password1Error.innerText = "1 number,1 captial letter,1 smallcase letter";
+        valid = false;
+    }
+
+    // Check if passwords match
+    if (password1 !== password2) {
+        password2Error.innerText = "Passwords do not match";
+        valid = false;
+    }
+
+    // Prevent form submission if any validation fails
+    if (!valid) {
+        event.preventDefault();
+    }
+});
+</script>
+
+</body>
+
+</html>

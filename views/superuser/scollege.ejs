@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../styles/colleges.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="vernav" style="overflow:hidden">
+            <div class="logo">
+                <div class="userdetail">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-heart" viewBox="0 0 16 16">
+                        <path d="M9 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0m-9 8c0 1 1 1 1 1h10s1 0 1-1-1-4-6-4-6 3-6 4m13.5-8.09c1.387-1.425 4.855 1.07 0 4.277-4.854-3.207-1.387-5.702 0-4.276Z"/>
+                      </svg>
+                    <div class="textpart">
+                        <p>Super User</p>
+                        <p><%=email%></p>
+                    </div>
+                </div>
+                <button id="logout">log out</button>
+            </div>
+            <div class="navbar">
+                <ul>
+                <li class="ele" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                        <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+                    </svg>
+                    <a id="home" href="/suser/home">Home</a>
+                </li>
+                <li class="ele" style="border-right: 5px solid snow;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard2-plus" viewBox="0 0 16 16">
+                        <path d="M9.5 0a.5.5 0 0 1 .5.5.5.5 0 0 0 .5.5.5.5 0 0 1 .5.5V2a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 2v-.5a.5.5 0 0 1 .5-.5.5.5 0 0 0 .5-.5.5.5 0 0 1 .5-.5z"/>
+                        <path d="M3 2.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 0 0-1h-.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1H12a.5.5 0 0 0 0 1h.5a.5.5 0 0 1 .5.5v12a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5z"/>
+                        <path d="M8.5 6.5a.5.5 0 0 0-1 0V8H6a.5.5 0 0 0 0 1h1.5v1.5a.5.5 0 0 0 1 0V9H10a.5.5 0 0 0 0-1H8.5z"/>
+                      </svg>
+                    <a href="/suser/college">colleges</a>
+                </li>
+                <li class="ele">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard2-pulse" viewBox="0 0 16 16">
+                        <path d="M9.5 0a.5.5 0 0 1 .5.5.5.5 0 0 0 .5.5.5.5 0 0 1 .5.5V2a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 2v-.5a.5.5 0 0 1 .5-.5.5.5 0 0 0 .5-.5.5.5 0 0 1 .5-.5z"/>
+                        <path d="M3 2.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 0 0-1h-.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1H12a.5.5 0 0 0 0 1h.5a.5.5 0 0 1 .5.5v12a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5z"/>
+                        <path d="M9.979 5.356a.5.5 0 0 0-.968.04L7.92 10.49l-.94-3.135a.5.5 0 0 0-.926-.08L4.69 10H4.5a.5.5 0 0 0 0 1H5a.5.5 0 0 0 .447-.276l.936-1.873 1.138 3.793a.5.5 0 0 0 .968-.04L9.58 7.51l.94 3.135A.5.5 0 0 0 11 11h.5a.5.5 0 0 0 0-1h-.128z"/>
+                      </svg>
+                      <a href="/suser/admin">admins</a>
+                </li>
+             
+               
+               
+                
+            </ul>
+            </div>
+            <div class="iiit">
+                <div class="userdetail" >
+                    
+                    <div class="textpart" style="display: flex;align-items:center;">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nonnavbar" style="overflow-y: scroll;">
+            <div class="hornav">
+                <div class="sessions" style="margin-top: 2%;">
+                    <div class="textpart1">
+                        <div class="textdiv">
+                            <p style="font-size: 30px;">Colleges List</p>
+                        </div>
+                        
+                        <div class="imgdiv">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                                <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"/>
+                              </svg>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div class="dates">
+                    <div class="text">
+                       <div class="date">
+                         <p ID="date" style="text-align: end;"></p>
+                         <p id="time"></p> 
+                       </div>
+                       <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-check" viewBox="0 0 16 16">
+                            <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+                            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
+                          </svg>
+                        </div>
+                    
+                    </div>
+                
+                
+                </div>
+            </div>
+
+            <form action="/college/signup" method="get"><button id="addpatient" type="submit" style="margin-top: 50px;width:10%;background-color: #0A7273;color:white">Add college</button></form>
+            <!---->
+          
+            <% if (clgs && clgs.length > 0) { %>
+                <% for (let index = 0; index < clgs.length; index++) { %>
+                    <div class="mm">
+                        <div class="mainbody" style="cursor:pointer">
+                            <div class="userdet">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                                </svg>
+                                <p><%= clgs[index].name %></p>  
+                            </div>
+                            <div class="ug">
+                                <p>Fields: <%= clgs[index].fields %></p>  
+                            </div>
+                            <div class="history">
+                                <form action="/deletecollege" method="post">
+                                    <input type="hidden" name="userId" value="<%= clgs[index]._id %>"> 
+                                    <button id="delete" type="submit" style="width:150%; background-color:#0A7273; color:white;">Delete</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="sec" style="display:none">
+                            <p style="display:flex;align-items:centre;justify-content:space-around;font-size:25px;color:#0A7273"><span>Number of doctors : <%=doctors[index].length%> </span> <span>Number of completed appointments : <%=completedapp[index].length%></span> </p>
+                            <p style="display:flex;align-items:centre;justify-content:space-around;font-size:25px;color:#0A7273"><span>Number of Students : <%=students[index].length%></span> <span>Number of upcoming appointments : <%=upcominap[index].length%></span></p>
+                        </div>
+                    </div>
+                    
+                <% } %>
+            <% } else { %>
+                <p>No colleges available</p>
+            <% } %>
+            
+            <div class="i" style="width: 90%;padding-left: 130px;margin-top: 25px">
+                <div id="input"  style="width: 100%;height:200px;font-size:32px;display:none" >
+                    <span><p><span>Name : </span></p></span>
+                    <span><p><span>Batch : </span></p></span>
+                    <span><p><span>Email:</span></p></span>
+                   
+                </div>
+                
+            </div>
+            <div class="i" style="width: 90%;">
+                <input type="text" id="input"  style="width: 100%;height:150px;font-size:32px;display:none">
+            </div>
+          <script>
+                const ins = document.getElementById("input");
+            document.getElementById("eye").addEventListener("click", () => {
+                var computedStyle = window.getComputedStyle(ins);
+                if (computedStyle.display === "none") {
+                    ins.style.display = "block";
+                } else {
+                    ins.style.display = "none";
+                }
+            })
+          </script>
+          
+
+
+            
+        </div>
+        <script>
+            var date = new Date();
+            var month = date.getMonth()+1
+            document.getElementById("date").textContent=date.getFullYear() +"-" + month +"-"+date.getDate();
+            function myFunction() {
+                document.getElementById("myDropdown").classList.toggle("show");
+              }
+              window.onclick = function(event) {
+                if (!event.target.matches('.dropbtn')) {
+                  var dropdowns = document.getElementsByClassName("dropdown-content");
+                  var i;
+                  for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                      openDropdown.classList.remove('show');
+                    }
+                  }
+                }
+              }
+    
+              function displayTime() {
+        var now = new Date();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds();
+        var meridiem = hours >= 12 ? "PM" : "AM";
+        
+        hours = hours % 12;
+        hours = hours ? hours : 12; 
+        
+        hours = (hours < 10 ? "0" : "") + hours;
+        minutes = (minutes < 10 ? "0" : "") + minutes;
+        seconds = (seconds < 10 ? "0" : "") + seconds;
+        
+        var timeString = hours + "." + minutes + "." + seconds + " " + meridiem;
+        document.getElementById("time").textContent = timeString;
+    }
+    displayTime();
+    
+    setInterval(displayTime, 1000);
+        
+            document.getElementById('logout').onclick = function(){
+                window.location.href='/logoutsuser'
+            };
+            document.getElementById('moredetails').onclick = function(){
+                window.location.href='more_details.html'
+            };
+        
+            document.addEventListener('DOMContentLoaded', function() {
+                let mainBodies = document.getElementsByClassName('mainbody');
+                console.log("Main Bodies:", mainBodies); // Check if elements are selected
+            
+                for (let i = 0; i < mainBodies.length; i++) {
+                    mainBodies[i].addEventListener('click', function() {
+                        console.log("Clicked:", this); // Verify the clicked element
+                        const hidden_div = this.nextElementSibling;
+                        console.log("Hidden Div:", hidden_div); // Check the next sibling element
+            
+                        if (hidden_div.style.display === 'none' || hidden_div.style.display === '') {
+                            hidden_div.style.display = 'block';
+                        } else {
+                            hidden_div.style.display = 'none';
+                        }
+                    });
+                }
+            });
+            
+
+            
+           
+
+    
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let mainBodies = document.getElementsByClassName('mainbody');
+                console.log("Main Bodies:", mainBodies); // Check if elements are selected
+    
+                for (let i = 0; i < mainBodies.length; i++) {
+                    mainBodies[i].addEventListener('click', function() {
+                        console.log("Clicked:", this); // Verify the clicked element
+                        const hidden_div = this.nextElementSibling;
+                        console.log("Hidden Div:", hidden_div); // Check the next sibling element
+    
+                        if (hidden_div.style.display === 'none' || hidden_div.style.display === '') {
+                            hidden_div.style.display = 'block';
+                        } else {
+                            hidden_div.style.display = 'none';
+                        }
+                    });
+                }
+            });
+        </script>
+    
+    </body>
+    </html>

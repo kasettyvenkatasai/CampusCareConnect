@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/styles/login.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <form  method="post" action="/doctor/home">
+            <p>lOG IN</p>
+            <input type="email" name="email" placeholder="Username" id="" style="margin-bottom: 2rem;"><br>
+            <div class="password">
+                <input type="password" name="password1" placeholder="Password" id="password1"><br>
+                <img src="/images/lock.png" alt="" id="lockimage">
+            </div>
+            <div>
+                <select name="college" id="colleges">
+                    <% for( let index = 0; index < clgs.length; index++ ) { %>
+                        <option value="<%= clgs[index].name %>"><%= clgs[index].name %></option>
+                    <% } %>
+                   
+                    
+                  </select>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" name="checkbox">
+                <label for="">Remember me</label>
+            </div>
+            
+            <input type="submit" value="Sign in" id="signin"><br>
+            <div class="new1">
+            
+            <a  href="/doctor/forgetpassword"id="fp" style="margin-left:0px">Forgot Password?</a>
+            </div>
+           
+        </form>
+    </div>
+<script>
+    var passwordInput = document.getElementById("password1");
+    var togglePassword = document.getElementById("lockimage");
+    togglePassword.addEventListener("click", function() {
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            togglePassword.src = "/images/eyeopen.png"; 
+        } else {
+            passwordInput.type = "password";
+            togglePassword.src = "/images/lock.png";
+        }
+    });
+    document.getElementById("su").addEventListener("click",function(){
+        window.location.href="/doctor/signup"
+    })
+    document.getElementById("fp").addEventListener("click",function(){
+        window.location.href="/doctor/forgetpassword"
+    })
+
+</script>
+</body>
+
+</html>
